@@ -5,7 +5,7 @@ date:   2016-05-29 17:07:08 +0900
 categories: jekyll update
 ---
 
-# Ourselves
+# What is SunnySideUp systems?
 SunnySideUp is a big data start-up located in UNIST, South Korea. 
 Our mission as an entreprise is to provide a cutting-edge solutions for Big Data processing.
 
