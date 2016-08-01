@@ -28,9 +28,10 @@ EclipseDFS's four main advantages:
 For those who are not familiar with DFS, here is brief explanation of how DFS works: A DFS divides the files into blocks 
 which are distributed (evenly) among the different servers.
 
-
 # Usage
-## Shell invocation
+
+EclipseDFS supports the basic operations that you might expect in a file system. Here is all the possible client invocation.
+
 {% highlight sh%}
-$ dfs put|get|rm|list|cat|info|format
+$ dfs put|get|rm|list|cat|info|format|pget|update|append
 {% endhighlight %}

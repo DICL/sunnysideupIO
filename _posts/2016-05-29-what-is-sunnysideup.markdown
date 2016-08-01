@@ -14,7 +14,7 @@ SunnySideUp was founded in DICL Lab (UNIST) as an organization which monetize
 research projects related to big data. 
 
 # Our products
-Among the several projects being develop in DICL lab, few of them aim to become a possible 
+Among the several projects being developed in DICL lab, few of them aim to become a possible 
 comercial product. At this moment, we are developing a big data framework formed by two main products:
 EclipseMR for data processing, EclipseDFS for data storage, and EclipseSQL for fast distributed database querying.
 
@@ -30,7 +30,7 @@ Here is a snippet of a simple _MapReduce_ application to count the lines in a la
 int main () {
   DataSet& A = DataSet::open("FileA");
   DataSet& B = A.map([](string line){ 
-   return {"Total", to_string(line.length())};
+   return {"Total", "1"};
   });
 
   B.reduce([](string a, string b){ 
