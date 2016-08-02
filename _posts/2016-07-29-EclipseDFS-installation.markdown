@@ -5,11 +5,9 @@ date:   2016-07-31 17:00:00 +0200
 categories: EclipseDFS install 
 ---
 
-First of all, I would like to apologize for a cumbersome installation process. The reason is that we 
-have a small team and our priorities at this moment is to add more features to our framework.
+First of all, I would like to apologize the cumbersome installation process of EclipseDFS. The reason behind it is that we have a small team and our priorities at this moment is to add more features to our framework.
 
-EclipseDFS audience are expected to be familiar with linux environments, thus we decided at this stage to 
-let the [super]user compile EclipseDFS with the hope of this advance user to add more features on his on. :)
+EclipseDFS audience are expected to be familiar with linux environments, thus we decided at this stage to let the [linux] user compile EclipseDFS, hoping that the user would add more features or fix bugs on his own. :)
 
 *Currently, we are not distributing packages or binaries of EclipseDFS. The user is expected to download the latest 
 version from our Github project site, and manually compile it and install it.*
@@ -25,10 +23,10 @@ If it is not your case you might have to tweek on your own some steps depending 
 
 # Dependencies
 
-1. Relativitely new GCC or clang version. 
+1. Relativitely new GCC (>=4.9) or clang (>=3.5) version.
 2. Boost library version higher than 1.53.
 3. Autotools.
-4. Ruby interpreter >= 2.0.0
+4. Ruby interpreter >= 2.0.0 (For the launcher)
 
 If you meet those requirements you can directly move to step one.
 
@@ -72,8 +70,8 @@ $ cd EclipseDFS
 $ sh autogen.sh
 {% endhighlight %}
 
-Finally, we move to our temporary folder and we call our generated configure script. The configure script 
-have many different options to tweek the future installation. In this tutorial, I introduce the prefix option
+Finally, we move to our temporary folder and call our generated configure script. The configure script 
+has many different options to tweek the future installation. In this tutorial, I introduce the prefix option
 which define where the binaries will be installed. __IMPORTANT__, if you want to install EclipseDFS for all
 the users you would to set the prefix `--prefix /usr/local`
 
@@ -97,6 +95,15 @@ compile and install EclipseDFS:
 $ make -j8 install
 {% endhighlight %}
 
+Now all the binaries have been copied to `~/sandbox/bin`. Thus, we want to access those binaries at any moment. 
+In order to do that we would need to add `~/sandbox/bin` to our path:
+
+{% highlight sh%}
+$ echo "export PATH=/home/vicente/sandbox/bin:$PATH" >> ~/.bashrc
+{% endhighlight %}
+
+*change vicente to your user*
+
 # Step three - Configuration files
 
 As for this local installation, the configuration file should be placed inside `~/.eclipse.json`. luckily we have
@@ -107,7 +114,7 @@ $ cp EclipseDFS/doc/eclipse.json ~/
 {% endhighlight %}
 
 The documentation of the configuration file is extensive and we keep adding new options, for up-to-date 
-documentation refer to this reference.
+documentation refer to this [reference] [json_ref].
 
 # Step four - EclipseDFS default launcher 
 
@@ -148,5 +155,4 @@ to get support from us (*From fastest to slowest*).
 
 [EclipseDFS_s]: https://github.com/DICL/EclipseDFS/issues
 [slack]:        https://dicl.slack.com/messages/general/
-
-
+[json_ref]:     https://github.com/DICL/EclipseDFS/wiki/Configuration-file-reference
