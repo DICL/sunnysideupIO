@@ -3,9 +3,10 @@ layout: post
 title:  "Installing EclipseDFS locally"
 date:   2016-07-31 17:00:00 +0200
 categories: EclipseDFS install 
+feature: /assets/img/server.png
 ---
 
-First of all, I would like to apologize the cumbersome installation process of EclipseDFS. The reason behind it is that we have a small team and our priorities at this moment is to add more features to our framework.
+> First of all, I would like to apologize the cumbersome installation process of EclipseDFS. The reason behind it is that we have a small team and our priorities at this moment is to add more features to our framework.
 
 EclipseDFS audience are expected to be familiar with linux environments, thus we decided at this stage to let the [linux] user compile EclipseDFS, hoping that the user would add more features or fix bugs on his own. :)
 
@@ -32,7 +33,7 @@ If you meet those requirements you can directly move to step one.
 
 # Dependencies (only for UBUNTU)
 
-*Ubuntu >= 14.04 is officially supported and its expected to work out of the box.*
+> Ubuntu >= 14.04 is officially supported and its expected to work out of the box.
 
 We will begin by adding the repositories for the boost library and recent compiler versions:
 
@@ -109,9 +110,9 @@ $ echo "export PATH=/home/vicente/sandbox/bin:$PATH" >> ~/.bashrc
 As for this local installation, the configuration file should be placed inside `~/.eclipse.json`. luckily we have
 a template (example) inside the EclipseDFS/doc folder:
 
-{% highlight sh%}
+~~~ sh
 $ cp EclipseDFS/doc/eclipse.json ~/
-{% endhighlight %}
+~~~
 
 The documentation of the configuration file is extensive and we keep adding new options, for up-to-date 
 documentation refer to this [reference] [json_ref].
