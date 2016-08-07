@@ -37,17 +37,16 @@ If you meet those requirements you can directly move to step one.
 
 We will begin by adding the repositories for the boost library and recent compiler versions:
 
-{% highlight sh%}
-$ sudo add-apt-repository ppa:ubuntu-toolchain-r-test
-$ sudo add-apt-repository ppa:boost-latest
+~~~ sh
+$ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 $ sudo apt-get update 
-{% endhighlight %}
+~~~
 
-Next step will be installing the needed packages
+Next step will be installing the needed packages:
 
-{% highlight sh%}
-$ sudo apt-get install libboost1.55-all-dev build-essential gcc-4.9 g++-4.9 
-{% endhighlight %}
+~~~ sh
+$ sudo apt-get -y install libboost1.55-all-dev build-essential gcc-4.9 g++-4.9 libsqlite3-dev
+~~~
 
 # Step one - Download and configuration
 
@@ -76,10 +75,10 @@ has many different options to tweek the future installation. In this tutorial, I
 which define where the binaries will be installed. __IMPORTANT__, if you want to install EclipseDFS for all
 the users you would to set the prefix `--prefix /usr/local`
 
-{% highlight sh%}
+~~~ sh
 $ cd ../build_dfs
 $ sh ../EclipseDFS/configure --prefix ~/sandbox  # Set the prefix, many other options are available
-{% endhighlight %}
+~~~
 
 Note that the configure script will check if your system meets the requirements for compilation, thus 
 errors are to be expected. 
@@ -152,7 +151,6 @@ to get support from us (*From fastest to slowest*).
 1. Reach us in our [slack room] [slack].
 2. Submit a ticket in our [github site] [EclipseDFS_s].
 3. E-mail any of our team (author list is in the README)
-
 
 [EclipseDFS_s]: https://github.com/DICL/EclipseDFS/issues
 [slack]:        https://dicl.slack.com/messages/general/
